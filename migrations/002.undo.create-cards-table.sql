@@ -1,0 +1,3 @@
+ALTER TABLE cards DROP COLUMN set_id;
+
+DROP TABLE IF EXISTS cards;
