@@ -25,3 +25,15 @@
 {"message":"Set with id 1 created.","level":"info"}
 {"message":"Set with id 123 not found.","level":"error"}
 {"message":"Set with id 2 deleted.","level":"info"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Undefined binding(s) detected when compiling UPDATE. Undefined column(s): [id] query: update \"cards\" set \"name\" = ?, \"set_id\" = ?, \"rarity\" = ?, \"type\" = ? where \"id\" = ?","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"connect ECONNREFUSED 127.0.0.1:5432","level":"error"}
+{"message":"Card with id 1 created","level":"info"}
+{"message":"Card with id 123 not found.","level":"error"}
+{"message":"Card with id 2 deleted.","level":"info"}
+{"message":"Set with id 1 created.","level":"info"}
+{"message":"Set with id 123 not found.","level":"error"}
+{"message":"Set with id 2 deleted.","level":"info"}

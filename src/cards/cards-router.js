@@ -104,6 +104,30 @@ cardsRouter
         })
         .catch(next)    
     })
+    
+    .patch(bodyParser, (req, res, next) => {
+        const { name, set_id, rarity, type } = req.body
+        const cardToUpdate = { name, set_id, rarity, type }
 
+        const numberOfValues = Object.values(cardToUpdate).filter(Boolean).length
+        if (numberOfValues === 0) {
+            logger.error(`Invalid update without required fields`)
+            return res.status(400).json({
+                error: {
+                    message: `Request body must contain a 'name', 'set_id', 'rarity' and 'type'.`
+                }
+            })
+        }
+
+            CardsService.updateCard(
+                req.app.get('db'),
+                req.params.card_id,
+                cardToUpdate
+            )
+            .then(numRowsAffected => {
+                res.status(204).end()
+            })
+            .catch(next)
+    })
 
 module.exports = cardsRouter
